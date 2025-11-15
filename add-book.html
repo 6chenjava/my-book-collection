@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加图书 - 我的图书收藏</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <h1>我的图书收藏</h1>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="add-book.html" class="active">添加图书</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="add-book-form">
+            <h2>添加新图书</h2>
+            <form id="book-form">
+                <div class="form-group">
+                    <label for="title">书名:</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">作者:</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">描述:</label>
+                    <textarea id="description" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cover-url">封面图片URL:</label>
+                    <input type="url" id="cover-url">
+                </div>
+                <div class="form-group">
+                    <label for="category">分类:</label>
+                    <select id="category" required>
+                        <option value="">请选择分类</option>
+                        <!-- 分类将通过JavaScript动态加载 -->
+                    </select>
+                </div>
+                <button type="submit">添加图书</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 我的图书收藏</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

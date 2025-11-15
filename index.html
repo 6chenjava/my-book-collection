@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的图书收藏</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <h1>我的图书收藏</h1>
+        <nav>
+            <a href="index.html" class="active">首页</a>
+            <a href="add-book.html">添加图书</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>发现与分享阅读的乐趣</h2>
+            <p>记录你的阅读旅程，建立个人数字图书馆</p>
+        </section>
+
+        <section class="categories">
+            <h2>图书分类</h2>
+            <div id="categories-list" class="categories-grid">
+                <!-- 分类将通过JavaScript动态加载 -->
+            </div>
+        </section>
+
+        <section class="books">
+            <h2>我的藏书</h2>
+            <div id="books-list" class="books-grid">
+                <!-- 图书将通过JavaScript动态加载 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 我的图书收藏</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
