@@ -1,6 +1,6 @@
 // Supabase配置
-const SUPABASE_URL = '你的Supabase项目URL';
-const SUPABASE_ANON_KEY = '你的Supabase匿名密钥';
+const SUPABASE_URL = 'https://eguecbmrtkubtecaaxys.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVndWVjYm1ydGt1YnRlY2FheHlzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxNTkwNjYsImV4cCI6MjA3ODczNTA2Nn0.znFD7HpQPVmX8nx8WuFNJgelLw21Noha1f4d2xH_iy0';
 
 // 初始化Supabase客户端
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -245,6 +245,16 @@ async function loadCategoriesForForm() {
         });
     } catch (error) {
         console.error('加载分类时出错:', error);
+
+         // 添加备用分类选项
+        const categorySelect = document.getElementById('category');
+        categorySelect.innerHTML = `
+            <option value="">请选择分类</option>
+            <option value="1">小说</option>
+            <option value="2">科技</option>
+            <option value="3">历史</option>
+            <option value="4">自助</option>
+        `;
     }
 }
 
@@ -288,4 +298,5 @@ function setupBookForm() {
             alert('添加图书时出错，请重试');
         }
     });
+
 }
