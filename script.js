@@ -10,20 +10,33 @@ let currentBookId = null;
 
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('页面加载完成，开始初始化...');
+    console.log('📄 页面加载完成，开始初始化...');
     
     // 根据当前页面执行不同的初始化函数
     const path = window.location.pathname;
     const page = path.split('/').pop();
+    const fullUrl = window.location.href;
     
-    console.log('当前页面:', page);
+    console.log('🔍 检测页面:', {
+        path: path,
+        page: page,
+        fullUrl: fullUrl
+    });
     
-    if (page === 'index.html' || page === '' || page === '/') {
+    // 改进的页面检测逻辑
+    if (page === 'index.html' || page === '' || page === '/' || fullUrl.includes('index.html')) {
+        console.log('🏠 初始化首页');
         initHomePage();
-    } else if (page === 'book-detail.html') {
+    } else if (page === 'book-detail.html' || fullUrl.includes('book-detail')) {
+        console.log('📖 初始化图书详情页');
         initBookDetailPage();
-    } else if (page === 'add-book.html') {
+    } else if (page === 'add-book.html' || fullUrl.includes('add-book')) {
+        console.log('➕ 初始化添加图书页');
         initAddBookPage();
+    } else {
+        console.log('❓ 未知页面:', page);
+        // 默认尝试初始化首页
+        initHomePage();
     }
 });
 
@@ -416,4 +429,5 @@ async function testSupabaseConnection() {
 
 // 页面加载时测试连接
 testSupabaseConnection();
+
 
