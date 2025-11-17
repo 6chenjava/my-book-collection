@@ -397,16 +397,16 @@ function setupBookForm() {
 }
 
 // 测试Supabase连接
+// 测试Supabase连接
 async function testSupabaseConnection() {
     try {
         console.log('测试Supabase连接...');
         const { data, error } = await supabase
             .from('categories')
-            .select('*')
-            .limit(1);
+            .select('*');
         
         if (error) throw error;
-        console.log('Supabase连接成功!');
+        console.log('Supabase连接成功! 数据:', data);
         return true;
     } catch (error) {
         console.error('Supabase连接失败:', error);
@@ -416,3 +416,4 @@ async function testSupabaseConnection() {
 
 // 页面加载时测试连接
 testSupabaseConnection();
+
