@@ -1,6 +1,6 @@
 // Supabase配置
-const SUPABASE_URL = 'https://eguecbmrtkubtecaaxys.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVndWVjYm1ydGt1YnRlY2FheHlzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxNTkwNjYsImV4cCI6MjA3ODczNTA2Nn0.znFD7HpQPVmX8nx8WuFNJgelLw21Noha1f4d2xH_iy0';
+const SUPABASE_URL = 'https://lvoilfcloljoyldoixvs.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx2b2lsZmNsb2xqb3lsZG9peHZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzMjUxMjEsImV4cCI6MjA3ODkwMTEyMX0.2bb5vQ2F84iz4qYizr64TartFD4iBpFQqO-kZTsemZA';
 
 // 初始化Supabase客户端
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -300,5 +300,6 @@ function setupBookForm() {
     });
 
 }
+
 
 
